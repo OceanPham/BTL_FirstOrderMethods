@@ -1,8 +1,12 @@
 # Guide tự học các phương pháp tối ưu bậc một
 
+Font giao diện: Arial, với Segoe UI/Tahoma dự phòng; dùng UTF-8 và văn bản Unicode NFC.
+
 Mở **index.html** bằng Edge, Chrome hoặc Firefox. Không cần server, Internet, npm hay Python để đọc và dùng mô phỏng.
 
 ## Lộ trình
+
+0. Bài toán giải quyết vấn đề gì, input/output của từng script và cách dùng mô hình đã học.
 
 1. Bài toán, loss, đạo hàm và gradient.
 2. GD, SGD, Mini-batch: ý tưởng, mã giả, phép tính tay.
@@ -13,7 +17,7 @@ Mở **index.html** bằng Edge, Chrome hoặc Firefox. Không cần server, Int
 7. Chuẩn hóa, SGDRegressor, SGDClassifier, partial_fit, MLP trong code 04.
 8. Tensor, DataLoader, backward và optimizer.step trong code 05.
 9. Cách đọc kết quả và phạm vi kết luận.
-10. Cài môi trường, chạy demo, xử lý lỗi, bài tập.
+10. Hướng dẫn chạy code từng bước: cài môi trường, sao chép lệnh, đối chiếu kết quả, mở thư mục ảnh và xử lý lỗi.
 11. Tám câu tự kiểm tra có giải thích.
 12. Toàn bộ code gốc và nguồn tham khảo.
 

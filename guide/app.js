@@ -28,9 +28,21 @@ async function copyCode(code,status) {
       const t=document.createElement("textarea");t.value=code;t.style.position="fixed";t.style.left="-10000px";document.body.append(t);t.select();
       const ok=document.execCommand("copy");t.remove();if(!ok)throw new Error("Clipboard unavailable");
     }
-    status.textContent="Đã sao chép code, không kèm số dòng.";
+    status.textContent="Đã sao chép nội dung, không kèm số dòng.";
   }catch{status.textContent="Trình duyệt không cho sao chép tự động. Bạn có thể chọn và sao chép code trực tiếp.";}
 }
+// Commands are documentation: copy them for a terminal, never execute them here.
+$$("pre.command").forEach((pre,i)=>{
+  const block=document.createElement("div");block.className="command-block";
+  pre.before(block);
+  const toolbar=document.createElement("div");toolbar.className="command-tools";
+  const label=document.createElement("span");label.textContent="Lệnh PowerShell";
+  const button=document.createElement("button");button.type="button";button.textContent="Sao chép lệnh";
+  const status=document.createElement("p");status.className="copy-status";status.id="command-copy-"+i;status.setAttribute("role","status");
+  button.setAttribute("aria-describedby",status.id);
+  toolbar.append(label,button);block.append(toolbar,pre,status);
+  button.addEventListener("click",()=>copyCode(pre.textContent,status));
+});
 $$("[data-snippet]").forEach(host=>{
   const key=host.dataset.snippet, sn=S.snippets[key];
   if(!sn){host.textContent="Không tìm thấy trích đoạn. Chạy tools/sync_sources.py.";return;}
@@ -78,11 +90,14 @@ function currentSection(){
 window.addEventListener("scroll",()=>{if(!ticking){requestAnimationFrame(currentSection);ticking=true;}},{passive:true});currentSection();
 
 // Explicitly self-marked reading progress, stored only in this browser.
+const validMarks=new Set($$(".mark-read").map(b=>b.dataset.mark));
+$$(".mark-read").forEach(b=>{if(!b.dataset.readLabel)b.dataset.readLabel=b.textContent;});
 let completed=[];
-try{const v=JSON.parse(localStorage.getItem("first-order-guide-read")||"[]");if(Array.isArray(v))completed=[...new Set(v.filter(x=>/^(?:[1-9]|1[0-2])$/.test(x)).map(String))];}catch{}
+try{const v=JSON.parse(localStorage.getItem("first-order-guide-read")||"[]");if(Array.isArray(v))completed=[...new Set(v.map(String).filter(x=>validMarks.has(x)))];}catch{}
 function progress(){
-  $$(".mark-read").forEach(b=>{const done=completed.includes(b.dataset.mark);b.classList.toggle("done",done);b.setAttribute("aria-pressed",String(done));b.textContent=done?"Đã đánh dấu hiểu · Bấm để bỏ đánh dấu":"Đánh dấu đã hiểu mục "+b.dataset.mark;});
-  $("#read-progress").value=completed.length;$("#read-count").textContent=completed.length+" / 12 mục";
+  $$(".mark-read").forEach(b=>{const done=completed.includes(b.dataset.mark);b.classList.toggle("done",done);b.setAttribute("aria-pressed",String(done));b.textContent=done?"Đã đánh dấu hiểu · Bấm để bỏ đánh dấu":b.dataset.readLabel;});
+  $("#read-progress").max=validMarks.size;
+  $("#read-progress").value=completed.length;$("#read-count").textContent=completed.length+" / "+validMarks.size+" mục";
 }
 $$(".mark-read").forEach(b=>b.addEventListener("click",()=>{const id=b.dataset.mark;completed=completed.includes(id)?completed.filter(x=>x!==id):[...completed,id];try{localStorage.setItem("first-order-guide-read",JSON.stringify(completed));}catch{}progress();}));progress();
 let detailsBefore=[];

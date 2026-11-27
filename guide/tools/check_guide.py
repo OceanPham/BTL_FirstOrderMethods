@@ -34,15 +34,32 @@ def main():
         page.on("request",lambda r:remote.append(r.url) if r.url.startswith(("http:","https:")) else None)
         page.goto((GUIDE/"index.html").as_uri());page.wait_for_load_state("networkidle")
         assert page.locator(".snippet").count()==23
-        assert page.locator("main>section").count()==13
-        assert page.locator(".mark-read").count()==12
+        assert page.locator("main>section").count()==14
+        assert page.locator(".mark-read").count()==13
+        assert page.locator("main>section").nth(1).get_attribute("id")=="problem"
+        assert "Input" in page.locator("#problem").inner_text()
+        assert "Output" in page.locator("#problem").inner_text()
+        assert page.locator('a[href="#run"]').count()>=3
+        assert page.locator("#run .command-tools button").count()==10
+        assert page.locator("h1").evaluate("el=>getComputedStyle(el).fontFamily").startswith("Arial")
+        assert page.locator(".formula").first.evaluate("el=>getComputedStyle(el).fontFamily").startswith("Arial")
+        cdp=ctx.new_cdp_session(page)
+        root=cdp.send("DOM.getDocument")["root"]["nodeId"]
+        title_node=cdp.send("DOM.querySelector",{"nodeId":root,"selector":"h1"})["nodeId"]
+        cdp.send("CSS.enable")
+        fonts=cdp.send("CSS.getPlatformFontsForNode",{"nodeId":title_node})["fonts"]
+        assert any("Arial" in f["familyName"] for f in fonts),fonts
+        print("PASS: first input/output section, 10 command blocks, actual Arial title font")
         # Images load lazily; visit each figure before checking decoded pixels.
         for img in page.locator("img").all():
             img.scroll_into_view_if_needed()
             page.wait_for_function("el=>el.complete&&el.naturalWidth>0",arg=img.element_handle())
         page.evaluate("window.scrollTo(0,0)")
         assert page.evaluate("document.documentElement.scrollWidth<=innerWidth"),"desktop horizontal overflow"
-        if a.screenshots: page.screenshot(path=str(a.screenshots/"desktop.png"))
+        if a.screenshots:
+            page.screenshot(path=str(a.screenshots/"desktop.png"))
+            page.locator("#problem").screenshot(path=str(a.screenshots/"problem.png"))
+            page.locator("#run").screenshot(path=str(a.screenshots/"run.png"))
         expected={"gd":0.7877037037037037,"sgd":0.666,"mb":0.78375}
         for method,w in expected.items():
             page.select_option("#method",method)
@@ -68,9 +85,14 @@ def main():
         assert "Bước 0" in page.locator("#quad-status").inner_text()
         print("PASS: convergence, oscillation and divergence controls")
         page.locator('[data-mark="6"]').click()
-        assert page.locator("#read-count").inner_text()=="1 / 12 mục"
+        assert page.locator("#read-count").inner_text()=="1 / 13 mục"
+        page.locator('[data-mark="0"]').click()
+        assert page.locator("#read-count").inner_text()=="2 / 13 mục"
         page.reload();page.wait_for_load_state("networkidle")
         assert page.locator('[data-mark="6"]').get_attribute("aria-pressed")=="true"
+        assert page.locator('[data-mark="0"]').get_attribute("aria-pressed")=="true"
+        page.locator("#run .command-tools button").first.click()
+        assert page.locator("#run .command-block .copy-status").first.inner_text()
         page.fill("#nav-search","numpy");assert page.locator("nav a:visible").count()==1
         page.fill("#nav-search","no-such-lesson");assert page.locator("#nav-empty").is_visible()
         page.fill("#nav-search","")
