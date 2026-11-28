@@ -20,11 +20,19 @@ Mở **index.html** bằng Edge, Chrome hoặc Firefox. Không cần server, Int
 10. Hướng dẫn chạy code từng bước: cài môi trường, sao chép lệnh, đối chiếu kết quả, mở thư mục ảnh và xử lý lỗi.
 11. Tám câu tự kiểm tra có giải thích.
 12. Toàn bộ code gốc và nguồn tham khảo.
+13. Kịch bản demo code 5 phút: 8 bước có mốc thời gian, đầy đủ lời thoại, lệnh chạy, code, giải thích hàm/biến và kết quả đối chiếu.
 
 Bấm “Đánh dấu đã hiểu” để lưu tiến độ riêng trong trình duyệt; không gửi dữ liệu đi.
 Tìm mục học chỉ lọc mục lục. Có thể dùng Ctrl+F để tìm trong nội dung.
 “In / lưu PDF” mở hộp thoại in của trình duyệt, tự mở các phần giải thích thu gọn.
 Các mô phỏng tính trực tiếp bằng JavaScript; không phải kết quả chạy Python/PyTorch trên trình duyệt.
+
+## Luyện thuyết trình demo
+
+Mở mục **13. Kịch bản demo 5 phút** trong mục lục hoặc nút **Luyện demo 5 phút** ở đầu guide.
+Chuẩn bị môi trường và chạy thử trước buổi trình bày; khi bấm giờ, đọc các khối **Lời trình bày** và thực hiện thao tác tương ứng. Các bảng giải thích dùng để chuẩn bị, không cần đọc toàn bộ trong 5 phút.
+Có liên kết nhảy đến từng bước, nút sao chép lệnh PowerShell và ảnh đồ thị đã lưu để luyện ngoại tuyến. Lệnh Python cần chạy trong Terminal; guide không thực thi Python.
+Tiến độ có 14 mục (0–13), giữ các đánh dấu đã lưu trước đó. Nút **In / lưu PDF** cũng bao gồm kịch bản mới.
 
 ## Cấu trúc
 

@@ -22,3 +22,26 @@ main{margin-left:255px;padding:0 6vw;max-width:1530px}section{padding:58px 0 66p
 @media(max-width:900px){.io-grid{grid-template-columns:1fr}}
 @media(max-width:760px){.io-block{padding:18px}.problem-flow{grid-template-columns:1fr}.problem-flow span{text-align:left;padding:15px}}
 @media print{.command-tools,.command-block>.copy-status{display:none}.io-grid{grid-template-columns:1fr 1fr}.io-block{padding:12pt}.command-block{break-inside:avoid}.command{white-space:pre-wrap;overflow:visible}.command code{white-space:pre-wrap;overflow-wrap:anywhere}}
+
+/* Rehearsal: spoken text stays distinct from preparation and code notes. */
+.demo-timeline{display:grid;grid-template-columns:1fr 1fr;gap:0 28px;padding-left:24px;margin:28px 0}
+.demo-timeline li{padding:7px 0;margin:0;font-size:15px}
+.demo-timeline a{display:block;padding:5px 0}
+.demo-timeline span{display:block;color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums}
+.demo-preparation{background:var(--wash);padding:22px 26px;margin:30px 0}
+.demo-preparation h3{margin-top:0}
+.demo-step{border-top:1px solid var(--line);padding:36px 0 24px;scroll-margin-top:90px}
+.demo-step-heading{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 22px;margin-bottom:22px}
+.demo-step-heading h3{margin:0;flex:1;min-width:min(100%,260px)}
+.demo-time{color:var(--blue);font-size:16px;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.demo-step h4{font-size:16px;color:var(--navy);margin:24px 0 12px}
+.speech-label{font-size:14px;font-weight:600;color:var(--blue);margin:25px 0 9px}
+.demo-speech{margin:0 0 24px;border-left:4px solid var(--blue);padding:18px 24px;background:#f1f6fa;line-height:1.9;font-size:18px}
+.demo-speech p{margin:0;max-width:74ch}
+.demo-code,.demo-output{margin:20px 0;padding:22px;max-width:100%;overflow:auto;white-space:pre;font:14px/1.9 Consolas,"Courier New",monospace;border:1px solid var(--line);border-radius:6px;background:#edf3f8}
+.demo-code code{font:inherit;padding:0;background:none;white-space:pre}
+.demo-output{background:#f7faf8;border-left:3px solid var(--green)}
+.demo-cue{border-top:2px solid var(--blue);padding:10px 0;margin-top:24px}
+#demo-figure{scroll-margin-top:90px}
+@media(max-width:760px){.demo-timeline{grid-template-columns:1fr}.demo-preparation{padding:18px}.demo-speech{padding:16px;font-size:17px}.demo-step-heading{display:block}.demo-time{display:block;margin-bottom:12px}.demo-code,.demo-output{font-size:12px;padding:16px}}
+@media print{.demo-timeline{display:block;columns:2}.demo-timeline li{break-inside:avoid}.demo-speech{font-size:11pt;break-inside:avoid;background:#f4f4f4}.demo-step-heading{break-after:avoid}.demo-step{padding:16pt 0}.demo-code,.demo-output,.demo-code code{white-space:pre-wrap;overflow-wrap:anywhere;overflow:visible;font-size:9pt}.demo-preparation{padding:12pt}.demo-time{color:inherit}}
