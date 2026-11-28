@@ -34,8 +34,8 @@ def main():
         page.on("request",lambda r:remote.append(r.url) if r.url.startswith(("http:","https:")) else None)
         page.goto((GUIDE/"index.html").as_uri());page.wait_for_load_state("networkidle")
         assert page.locator(".snippet").count()==23
-        assert page.locator("main>section").count()==15
-        assert page.locator(".mark-read").count()==14
+        assert page.locator("main>section").count()==16
+        assert page.locator(".mark-read").count()==15
         assert page.locator("main>section").nth(1).get_attribute("id")=="problem"
         assert "Input" in page.locator("#problem").inner_text()
         assert "Output" in page.locator("#problem").inner_text()
@@ -85,15 +85,18 @@ def main():
         assert "Bước 0" in page.locator("#quad-status").inner_text()
         print("PASS: convergence, oscillation and divergence controls")
         page.locator('[data-mark="6"]').click()
-        assert page.locator("#read-count").inner_text()=="1 / 14 mục"
+        assert page.locator("#read-count").inner_text()=="1 / 15 mục"
         page.locator('[data-mark="0"]').click()
-        assert page.locator("#read-count").inner_text()=="2 / 14 mục"
+        assert page.locator("#read-count").inner_text()=="2 / 15 mục"
         page.locator('[data-mark="13"]').click()
-        assert page.locator("#read-count").inner_text()=="3 / 14 mục"
+        assert page.locator("#read-count").inner_text()=="3 / 15 mục"
+        page.locator('[data-mark="14"]').click()
+        assert page.locator("#read-count").inner_text()=="4 / 15 mục"
         page.reload();page.wait_for_load_state("networkidle")
         assert page.locator('[data-mark="6"]').get_attribute("aria-pressed")=="true"
         assert page.locator('[data-mark="0"]').get_attribute("aria-pressed")=="true"
         assert page.locator('[data-mark="13"]').get_attribute("aria-pressed")=="true"
+        assert page.locator('[data-mark="14"]').get_attribute("aria-pressed")=="true"
         page.locator("#run .command-tools button").first.click()
         assert page.locator("#run .command-block .copy-status").first.inner_text()
         page.fill("#nav-search","numpy");assert page.locator("nav a:visible").count()==1
@@ -105,14 +108,27 @@ def main():
         page.fill("#nav-search","")
         page.locator('.demo-timeline a[href="#demo-step-6"]').click()
         assert page.url.endswith("#demo-step-6")
-        page.locator("#demo-step-5 .command-tools button").click()
-        assert page.locator("#demo-step-5 .copy-status").inner_text()
+        page.locator("#demo-step-1 .command-tools button").click()
+        assert page.locator("#demo-step-1 .copy-status").inner_text()
         if a.screenshots:
             page.locator("#demo-script h2").scroll_into_view_if_needed()
             page.screenshot(path=str(a.screenshots/"demo-intro.png"))
             page.locator("#demo-step-2").scroll_into_view_if_needed()
             page.screenshot(path=str(a.screenshots/"demo-step.png"))
         print("PASS: rehearsal navigation, command copy and persisted chapter 13")
+        page.locator('nav a[href="#slide-script"]').click()
+        assert page.url.endswith("#slide-script")
+        assert page.locator(".slide-talk").evaluate_all("els=>els.map(el=>Number(el.dataset.slide))")==[16,17,18,19,20]
+        assert page.locator(".slide-talk").evaluate_all("els=>els.reduce((n,el)=>n+Number(el.dataset.seconds),0)")==190
+        if a.screenshots:
+            page.locator("#slide-script").evaluate("el=>el.scrollIntoView({block:'start'})")
+            page.screenshot(path=str(a.screenshots/"slide-script.png"))
+            page.locator("#slide-16").evaluate("el=>el.scrollIntoView({block:'start'})")
+            page.screenshot(path=str(a.screenshots/"slide-16.png"))
+        page.locator('.slide-index a[href="#slide-20"]').click()
+        page.locator('#slide-20 a[href="#demo-script"]').click()
+        assert page.url.endswith("#demo-script")
+        print("PASS: slides 16–20, slide timing and transition to demo after slide 20")
         page.locator(".open-source").first.click()
         assert page.locator("#full-source").get_attribute("open") is not None
         assert page.locator("#source-select").input_value()=="01"
@@ -138,6 +154,10 @@ def main():
         assert page.locator("#sidebar").is_hidden()
         assert page.locator("#demo-step-2 .demo-speech").is_visible()
         assert page.locator("#demo-step-1 .command-tools").is_hidden()
+        page.evaluate("window.dispatchEvent(new Event('beforeprint'))")
+        assert page.locator("#slide-16 details").get_attribute("open") is not None
+        assert page.locator("#demo-step-3 details").get_attribute("open") is not None
+        page.evaluate("window.dispatchEvent(new Event('afterprint'))")
         page.emulate_media(media="screen")
         mobile=ctx.new_page();mobile.set_viewport_size({"width":390,"height":844})
         mobile.goto((GUIDE/"index.html").as_uri());mobile.wait_for_load_state("networkidle")
@@ -156,6 +176,13 @@ def main():
         assert mobile.url.endswith("#demo-step-6")
         assert mobile.evaluate("document.documentElement.scrollWidth<=innerWidth"),"rehearsal mobile overflow"
         if a.screenshots:mobile.screenshot(path=str(a.screenshots/"demo-mobile.png"))
+        mobile.click("#menu-toggle")
+        mobile.locator('nav a[href="#slide-script"]').click()
+        mobile.locator('.slide-index a[href="#slide-20"]').click()
+        assert mobile.evaluate("document.documentElement.scrollWidth<=innerWidth"),"slide script mobile overflow"
+        if a.screenshots:mobile.screenshot(path=str(a.screenshots/"slide-mobile.png"))
+        mobile.locator('#slide-20 a[href="#demo-script"]').click()
+        assert mobile.url.endswith("#demo-script")
         assert not errors,errors
         assert not remote,remote
         print("PASS: 390px mobile menu/lab, print layout, no JS errors, zero remote requests")

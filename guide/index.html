@@ -3,13 +3,13 @@
 <body><a class="skip" href="#main">Đến nội dung chính</a>
 <header class="mobile-bar"><span>Sổ tay tối ưu bậc một</span><button id="menu-toggle" aria-expanded="false" aria-controls="sidebar">Mục lục</button></header>
 <aside id="sidebar"><a class="brand" href="#start">Một bước<br><strong>gradient.</strong></a><p class="sidebar-caption">Sổ tay tự học của nhóm 04<br>Lớp 33CNTT21</p><label for="nav-search">Tìm mục học</label><input id="nav-search" type="search" placeholder="Ví dụ: NumPy, loss…" autocomplete="off">
-<nav aria-label="Mục lục bài học"><a href="#start">Bắt đầu từ đây</a><a href="#problem">0. Bài toán · Input / Output</a><a href="#basics">1. Bài toán, loss và gradient</a><a href="#algorithms">2. Ba cách học từ dữ liệu</a><a href="#lab">3. Phòng thử từng bước</a><a href="#python">4. Đọc Python · code 01</a><a href="#step-size">5. Chọn bước đi · code 02</a><a href="#numpy">6. NumPy · code 03</a><a href="#sklearn">7. scikit-learn · code 04</a><a href="#torch">8. PyTorch · code 05</a><a href="#results">9. Đọc và so sánh kết quả</a><a href="#run">10. Hướng dẫn chạy code</a><a href="#quiz">11. Tự kiểm tra</a><a href="#sources">12. Code gốc &amp; tài liệu</a><a href="#demo-script">13. Kịch bản demo 5 phút</a></nav>
-<p id="nav-empty" hidden>Không thấy mục phù hợp. Thử “code” hoặc “gradient”.</p><div class="reading"><label for="read-progress">Tiến độ tự đánh dấu</label><progress id="read-progress" max="14" value="0"></progress><span id="read-count">0 / 14 mục</span></div><button id="print-guide" class="quiet">In / lưu PDF</button><p class="offline">Đọc và thử ngoại tuyến.<br>Không gửi dữ liệu ra ngoài.</p></aside>
+<nav aria-label="Mục lục bài học"><a href="#start">Bắt đầu từ đây</a><a href="#problem">0. Bài toán · Input / Output</a><a href="#basics">1. Bài toán, loss và gradient</a><a href="#algorithms">2. Ba cách học từ dữ liệu</a><a href="#lab">3. Phòng thử từng bước</a><a href="#python">4. Đọc Python · code 01</a><a href="#step-size">5. Chọn bước đi · code 02</a><a href="#numpy">6. NumPy · code 03</a><a href="#sklearn">7. scikit-learn · code 04</a><a href="#torch">8. PyTorch · code 05</a><a href="#results">9. Đọc và so sánh kết quả</a><a href="#run">10. Hướng dẫn chạy code</a><a href="#quiz">11. Tự kiểm tra</a><a href="#sources">12. Code gốc &amp; tài liệu</a><a href="#demo-script">13. Kịch bản demo 3 phút</a><a href="#slide-script">14. Lời thuyết trình slide 16–20</a></nav>
+<p id="nav-empty" hidden>Không thấy mục phù hợp. Thử “code” hoặc “gradient”.</p><div class="reading"><label for="read-progress">Tiến độ tự đánh dấu</label><progress id="read-progress" max="15" value="0"></progress><span id="read-count">0 / 15 mục</span></div><button id="print-guide" class="quiet">In / lưu PDF</button><p class="offline">Đọc và thử ngoại tuyến.<br>Không gửi dữ liệu ra ngoài.</p></aside>
 <main id="main">
 <section id="start" class="hero"><p class="context">Tối ưu hóa ứng dụng / BTL_FirstOrderMethods</p><h1>Từ một bước gradient<br>đến code chạy được.</h1><p class="lead">Chưa biết gradient, NumPy hay mạng nơ-ron? Bắt đầu bằng ba điểm dữ liệu. Tính một bước bằng tay. Sau đó tìm đúng phép tính ấy trong code.</p>
 <div class="hero-equation"><span>Tham số mới</span><b>=</b><span>Tham số cũ</span><b>−</b><span><small>Đi bao xa?</small>η</span><b>×</b><span><small>Đi theo hướng nào?</small>gradient</span></div>
-<div class="intro-path"><div><h2>Đọc lần đầu</h2><p>Đọc mục 0 để biết vấn đề cần giải quyết, input và output. Mục 1–3 giúp hiểu cơ chế. Mục 4–8 nối toán với code thật. Mục 9–11 giúp đọc kết quả, chạy demo và tự kiểm tra. Mục 13 có kịch bản demo 5 phút để luyện thuyết trình.</p></div><div><h2>Học bằng thao tác</h2><p>Bấm <strong>Đi 1 bước</strong>, đọc số thay vào công thức rồi dự đoán bước tiếp. Bạn không cần cài Python để thử mô phỏng.</p></div></div>
-<a class="primary link-button" href="#problem">Bắt đầu bài học</a> <a class="link-button secondary" href="#lab">Thử 3 phương pháp</a> <a class="link-button secondary" href="#run">Hướng dẫn chạy code</a> <a class="link-button secondary" href="#demo-script">Luyện demo 5 phút</a><p class="meta">Phạm vi: GD, SGD, Mini-batch GD và 5 script của đề tài. Hình kết quả lấy từ lần chạy đã lưu; mô phỏng tính trực tiếp bằng JavaScript.</p></section>
+<div class="intro-path"><div><h2>Đọc lần đầu</h2><p>Đọc mục 0 để biết vấn đề cần giải quyết, input và output. Mục 1–3 giúp hiểu cơ chế. Mục 4–8 nối toán với code thật. Mục 9–11 giúp đọc kết quả, chạy demo và tự kiểm tra. Mục 14 có lời thuyết trình slide 16–20; mục 13 là demo code 3 phút thực hiện sau khi trình bày hết slide 20.</p></div><div><h2>Học bằng thao tác</h2><p>Bấm <strong>Đi 1 bước</strong>, đọc số thay vào công thức rồi dự đoán bước tiếp. Bạn không cần cài Python để thử mô phỏng.</p></div></div>
+<a class="primary link-button" href="#problem">Bắt đầu bài học</a> <a class="link-button secondary" href="#lab">Thử 3 phương pháp</a> <a class="link-button secondary" href="#run">Hướng dẫn chạy code</a> <a class="link-button secondary" href="#demo-script">Luyện demo 3 phút</a> <a class="link-button secondary" href="#slide-script">Thuyết trình slide 16–20</a><p class="meta">Phạm vi: GD, SGD, Mini-batch GD và 5 script của đề tài. Hình kết quả lấy từ lần chạy đã lưu; mô phỏng tính trực tiếp bằng JavaScript.</p></section>
 
 <section id="problem" data-chapter="0">
 <div class="chapter-heading"><span>00</span><h2>Bài toán này giải quyết vấn đề gì?</h2></div>
@@ -201,212 +201,173 @@ python --version</code></pre>
 <p class="meta">Liên kết chính thức cần Internet; bài học, code, ảnh, mô phỏng trong guide dùng ngoại tuyến. Bảo đảm hội tụ cần giả thiết; dùng GD cho mạng không lồi không bảo đảm nghiệm toàn cục.</p>
 <button class="mark-read" data-mark="12">Đánh dấu đã biết cách tra nguồn</button></section>
 <section id="demo-script" data-chapter="13">
-<div class="chapter-heading"><span>13</span><h2>Kịch bản demo code 5 phút</h2></div>
-<p class="lead">Từ ví dụ ba mẫu đến thí nghiệm một nghìn mẫu: chạy đúng lệnh, chỉ đúng đoạn code và giải thích được kết quả.</p>
-<p>Kịch bản dùng <code>01_vi_du_tinh_tay.py</code> để giải thích phép cập nhật và <code>03_so_sanh_gd_sgd_minibatch.py</code> để so sánh ba thuật toán. <strong>Đọc phần “Lời trình bày” khi luyện nói.</strong> Các bảng giải thích và đoạn code giúp bạn chuẩn bị, không cần đọc hết trong 5 phút. Mốc thời gian là mục tiêu luyện tập, có thể điều chỉnh theo tốc độ nói và thời gian chạy trên máy.</p>
-<div class="note"><strong>Cách luyện:</strong> mở guide cạnh VS Code, chuẩn bị môi trường trước, rồi bấm giờ từ bước 1. Tại mỗi bước, thực hiện thao tác, chỉ vào code hoặc kết quả và đọc lời thoại. Dùng các liên kết dưới đây để quay lại đoạn cần tập.</div>
-<ol class="demo-timeline" aria-label="Tám bước của kịch bản demo">
-<li><a href="#demo-step-1"><span>0:00–0:25</span>Giới thiệu và chạy file 01</a></li>
-<li><a href="#demo-step-2"><span>0:25–1:15</span>Gradient và phép cập nhật</a></li>
-<li><a href="#demo-step-3"><span>1:15–1:50</span>Ba cách chọn mẫu</a></li>
-<li><a href="#demo-step-4"><span>1:50–2:15</span>Đọc kết quả ví dụ nhỏ</a></li>
-<li><a href="#demo-step-5"><span>2:15–2:50</span>Chạy file 03, input/output</a></li>
-<li><a href="#demo-step-6"><span>2:50–3:50</span>Giải thích hàm huấn luyện</a></li>
-<li><a href="#demo-step-7"><span>3:50–4:30</span>So sánh bảng kết quả</a></li>
-<li><a href="#demo-step-8"><span>4:30–5:00</span>Mở đồ thị và kết luận</a></li>
+<div class="chapter-heading"><span>13</span><h2>Kịch bản demo code 3 phút</h2></div>
+<p class="lead">Sau khi trình bày xong slide 16–20: giới thiệu cấu trúc file, nối mã giả với code của ba thuật toán, rồi chạy và đối chiếu kết quả.</p>
+<p>Chạy <code>03_so_sanh_gd_sgd_minibatch.py</code> để minh họa GD, SGD và Mini-batch trên cùng bài toán hồi quy. Các file còn lại chỉ giới thiệu vai trò; tập trung vào hàm <code>huan_luyen</code> và hai dòng gradient/cập nhật để giữ phần demo khoảng 3 phút.</p>
+<div class="note"><strong>Thứ tự:</strong> <a href="#slide-script">nói hết slide 16–20</a> → <a href="#slide-20">câu chuyển sang demo</a> → sáu bước bên dưới → cảm ơn và hỏi đáp. Chỉ đọc các khối “Lời trình bày” trong 3 phút; bảng biến và phần giải thích thu gọn dùng để chuẩn bị.</div>
+<ol class="demo-timeline" aria-label="Sáu bước demo trong ba phút">
+<li><a href="#demo-step-1"><span>0:00–0:25</span>Cấu trúc file và lệnh chạy</a></li>
+<li><a href="#demo-step-2"><span>0:25–0:45</span>Input, output và loss</a></li>
+<li><a href="#demo-step-3"><span>0:45–1:20</span>Từ mã giả đến ba cách chọn lô</a></li>
+<li><a href="#demo-step-4"><span>1:20–1:55</span>Hai dòng gradient/cập nhật</a></li>
+<li><a href="#demo-step-5"><span>1:55–2:30</span>Đọc bảng thí nghiệm A</a></li>
+<li><a href="#demo-step-6"><span>2:30–3:00</span>Đồ thị và kết thúc demo</a></li>
 </ol>
 
 <div id="demo-preparation" class="demo-preparation">
-<h3>Chuẩn bị trước buổi demo · Không tính vào 5 phút</h3>
-<p>Mở sẵn hai file Python trong VS Code. Mở Terminal PowerShell, chuyển vào thư mục <code>code</code>, chọn đúng môi trường Python và cài thư viện nếu chưa có:</p>
+<h3>Chuẩn bị trước · Không tính vào 3 phút</h3>
+<p>Mở sẵn file 03 tại hàm <code>huan_luyen</code>, Terminal PowerShell và ảnh kết quả. Chọn đúng môi trường Python; cài thư viện trước buổi trình bày nếu chưa có:</p>
 <pre class="command"><code>cd "E:\Subjects\DT_ThacSi\TUH-UD\BTL_FirstOrderMethods\code"
 $env:PYTHONIOENCODING = "utf-8"
 python -m pip install numpy matplotlib</code></pre>
-<p>Hai script này không cần PyTorch. Hoàn thành cài đặt trước khi lên trình bày; xem <a href="#run">mục 10</a> nếu cần tạo môi trường ảo hoặc xử lý lỗi thiếu thư viện. Nếu chuyển máy, thay đường dẫn bằng thư mục bài làm trên máy đó.</p>
-<p>Chạy thử cả hai file trước buổi demo. Mở sẵn ảnh <code>hinh4_mat_mat.png</code> trong thư mục <code>hinh</code> và phóng to chữ trong VS Code, Terminal. File 03 chạy cả thí nghiệm A và B, nhưng lời trình bày dưới đây tập trung vào A. Khi chạy lại, các ảnh cùng tên sẽ được ghi đè.</p>
-<p>Nếu file 03 chưa hoàn tất khi đến bước mở đồ thị, dùng ảnh đã chạy thử và nói rõ đó là kết quả của lần chạy chuẩn bị. Bạn cũng có thể xem <a href="#demo-figure">bản ảnh đã lưu trong guide</a> để luyện ngoại tuyến.</p>
+<p>Chạy thử file 03 một lần trước khi lên trình bày. Script chạy cả thí nghiệm A và B, tạo ba ảnh trong thư mục <code>hinh</code> và ghi đè ảnh cùng tên. Trong 3 phút chỉ đọc bảng A và ảnh <code>hinh4_mat_mat.png</code>. Không cài thư viện hoặc chạy PyTorch trong thời gian demo.</p>
+<p>Nếu lệnh <code>python</code> không hoạt động, xem <a href="#run">mục 10</a>. Nếu chuyển máy, thay đường dẫn. Khi chương trình đang chạy, chuyển sang VS Code để giải thích; nếu chưa xong ở bước 5, dùng kết quả và ảnh đã chuẩn bị, nói rõ đó là lần chạy trước. Mốc 3 phút là mục tiêu luyện tập, không phải cam kết thời gian thực thi trên mọi máy.</p>
 </div>
 
 <article id="demo-step-1" class="demo-step">
-<div class="demo-step-heading"><span class="demo-time">0:00–0:25</span><h3>Bước 1. Giới thiệu bài toán và chạy ví dụ nhỏ</h3></div>
-<p><strong>Thao tác:</strong> chạy lệnh sau, rồi kéo Terminal đến <strong>PHẦN B</strong>, nơi so sánh GD, SGD và Mini-batch GD.</p>
-<pre class="command"><code>python 01_vi_du_tinh_tay.py</code></pre>
+<div class="demo-step-heading"><span class="demo-time">0:00–0:25</span><h3>Bước 1. Giới thiệu cấu trúc file và chạy file 03</h3></div>
+<p><strong>Thao tác:</strong> mở Explorer của VS Code ở thư mục <code>code</code>, chỉ nhanh năm file, rồi chạy lệnh ở Terminal.</p>
+<pre class="demo-output">code/
+  01_vi_du_tinh_tay.py              → kiểm chứng ví dụ tính tay
+  02_gd_ham_hai_bien.py             → khảo sát cách chọn bước học
+  03_so_sanh_gd_sgd_minibatch.py    → tự cài đặt ba thuật toán
+  04_thu_vien_sklearn.py           → dùng thư viện scikit-learn
+  05_pytorch_mang_no_ron.py        → huấn luyện mạng bằng PyTorch</pre>
+<pre class="command"><code>python 03_so_sanh_gd_sgd_minibatch.py</code></pre>
 <p class="speech-label">Lời trình bày</p>
-<blockquote class="demo-speech"><p>“Phần demo giải quyết bài toán tìm tham số để mô hình dự đoán gần với dữ liệu đã biết. Ví dụ đầu tiên có ba cặp dữ liệu và mô hình dự đoán y bằng w nhân x. Đầu vào là các cặp x, y; đầu ra cần tìm là hệ số w. Em chạy file 01 để quan sát cách ba thuật toán cập nhật hệ số này.”</p></blockquote>
-<h4>Đoạn code cần chỉ vào · File 01</h4>
-<pre class="demo-code" tabindex="0" aria-label="Dữ liệu đầu vào trong file 01"><code>X = np.array([1.0, 2.0, 3.0])
-Y = np.array([1.0, 3.0, 2.0])
-N = len(X)
-eta = 0.1</code></pre>
-<div class="table-wrap"><table><caption>Biến và hàm cần hiểu trước khi trình bày</caption><thead><tr><th>Biến / hàm</th><th>Ý nghĩa</th></tr></thead><tbody>
-<tr><td><code>np.array(...)</code></td><td>Tạo mảng số của thư viện NumPy, hỗ trợ tính toán trên nhiều phần tử.</td></tr>
-<tr><td><code>X</code></td><td>Các giá trị đầu vào: 1, 2, 3.</td></tr>
-<tr><td><code>Y</code></td><td>Giá trị đúng tương ứng: 1, 3, 2.</td></tr>
-<tr><td><code>N</code></td><td>Số mẫu dữ liệu, bằng 3; <code>len(X)</code> trả về độ dài mảng X.</td></tr>
-<tr><td><code>w</code></td><td>Hệ số cần học; mỗi phương pháp bắt đầu từ <code>w = 0</code>.</td></tr>
-<tr><td><code>eta</code></td><td>Tốc độ học, điều khiển độ lớn của mỗi bước cập nhật.</td></tr>
-</tbody></table></div>
-<p>Ở ví dụ này, mô hình <strong>không có hệ số chặn</strong>: dự đoán là <code>w * x</code>.</p>
+<blockquote class="demo-speech"><p>“Code gồm năm file: 01 kiểm chứng tính tay, 02 khảo sát bước học, 03 tự cài đặt ba thuật toán, 04 dùng scikit-learn và 05 dùng PyTorch. Em chạy file 03. Trong file này có phần tạo dữ liệu, hàm mất mát, hàm huấn luyện và phần so sánh, lưu hình. Em tập trung vào đoạn cài đặt theo mã giả.”</p></blockquote>
 </article>
 
 <article id="demo-step-2" class="demo-step">
-<div class="demo-step-heading"><span class="demo-time">0:25–1:15</span><h3>Bước 2. Giải thích hàm tính gradient và phép cập nhật</h3></div>
-<p><strong>Thao tác:</strong> chuyển sang file 01, chỉ vào hàm <code>grad_batch</code> và hai dòng cập nhật.</p>
-<pre class="demo-code" tabindex="0" aria-label="Hàm grad_batch trong file 01"><code>def grad_batch(w, idx):
-    """Gradient trung bình trên các mẫu có chỉ số idx."""
-    return np.mean((w * X[idx] - Y[idx]) * X[idx])</code></pre>
-<pre class="demo-code" tabindex="0" aria-label="Tính gradient và cập nhật w"><code>g = grad_batch(w, np.arange(N))
-w_new = w - eta * g</code></pre>
-<p class="speech-label">Lời trình bày</p>
-<blockquote class="demo-speech"><p>“Hàm grad_batch tính gradient trên những mẫu được chọn. Biến w là tham số hiện tại, còn idx chứa vị trí các mẫu dùng để tính. Biểu thức w nhân X tạo dự đoán; trừ Y cho sai lệch. Nhân tiếp với X rồi lấy trung bình sẽ thu được gradient của hàm mất mát bình phương có hệ số một phần hai. Sau đó, tham số mới bằng tham số cũ trừ tốc độ học nhân gradient. Tại w bằng 0, dùng cả ba mẫu cho gradient âm 4,3333; vì vậy w mới bằng 0,4333.”</p></blockquote>
-<div class="table-wrap"><table><caption>Giải thích từng phần của phép cập nhật</caption><thead><tr><th>Đoạn code</th><th>Ý nghĩa</th></tr></thead><tbody>
-<tr><td><code>idx</code></td><td>Chỉ số mẫu, đánh số từ 0. Ví dụ <code>[0, 1]</code> chọn hai mẫu đầu.</td></tr>
-<tr><td><code>X[idx]</code>, <code>Y[idx]</code></td><td>Lấy dữ liệu của các mẫu được chọn.</td></tr>
-<tr><td><code>w * X[idx]</code></td><td>Dự đoán của mô hình trên các mẫu đó.</td></tr>
-<tr><td><code>w * X[idx] - Y[idx]</code></td><td>Sai lệch giữa dự đoán và giá trị đúng.</td></tr>
-<tr><td><code>np.mean(...)</code></td><td>Lấy trung bình các phần tử.</td></tr>
-<tr><td><code>g</code></td><td>Gradient tại tham số hiện tại, tính từ lô đang xét.</td></tr>
-<tr><td><code>np.arange(N)</code></td><td>Tạo các chỉ số <code>[0, 1, 2]</code>, tức chọn toàn bộ dữ liệu.</td></tr>
-<tr><td><code>w_new</code></td><td>Tham số sau một lần cập nhật.</td></tr>
-</tbody></table></div>
-<h4>Phép tính đối chiếu</h4>
-<pre class="demo-output">Gradient = [(-1 × 1) + (-3 × 2) + (-2 × 3)] / 3
-         = -13/3
-
-w mới = 0 - 0,1 × (-13/3)
-      ≈ 0,4333</pre>
-<p>Hàm mất mát tương ứng là <strong>J(w) = (1/2N) Σᵢ(wxᵢ − yᵢ)²</strong>; đạo hàm trên một mẫu là <strong>(wxᵢ − yᵢ)xᵢ</strong>. Xem <a href="#python">mục 4</a> để đọc cả vòng lặp và mã nguồn có số dòng.</p>
-</article>
-
-<article id="demo-step-3" class="demo-step">
-<div class="demo-step-heading"><span class="demo-time">1:15–1:50</span><h3>Bước 3. Chỉ ra ba phương pháp khác nhau ở đâu</h3></div>
-<p><strong>Thao tác:</strong> lần lượt chỉ vào các lời gọi <code>grad_batch</code> trong ba vòng lặp của file 01.</p>
-<h4>GD · Chọn toàn bộ mẫu</h4>
-<pre class="demo-code" tabindex="0" aria-label="Chọn mẫu của GD"><code>g = grad_batch(w, np.arange(N))</code></pre>
-<h4>SGD · Chọn một mẫu</h4>
-<pre class="demo-code" tabindex="0" aria-label="Chọn mẫu của SGD"><code>g = grad_batch(w, np.array([i]))</code></pre>
-<h4>Mini-batch GD · Chọn một lô nhỏ</h4>
-<pre class="demo-code" tabindex="0" aria-label="Chọn mẫu của Mini-batch GD"><code>g = grad_batch(w, np.array(idx))</code></pre>
-<p>Cả ba đều cập nhật bằng:</p>
-<pre class="demo-code" tabindex="0" aria-label="Công thức cập nhật dùng chung"><code>w_new = w - eta * g</code></pre>
-<p class="speech-label">Lời trình bày</p>
-<blockquote class="demo-speech"><p>“Ba phương pháp dùng chung công thức cập nhật. Khác biệt nằm ở dữ liệu dùng để tính gradient: GD dùng cả ba mẫu, SGD dùng một mẫu, còn Mini-batch dùng hai mẫu. Trong file 01, thứ tự mẫu và các lô được đặt sẵn để dễ đối chiếu với tính tay. Sang file 03, dữ liệu sẽ được xáo trộn sau mỗi lượt học.”</p></blockquote>
-<h4>Các biến cần nhớ</h4>
-<ul><li><code>k</code>: số thứ tự lần cập nhật.</li><li><code>i</code>: chỉ số của một mẫu trong SGD.</li><li><code>idx</code>: danh sách chỉ số của một lô.</li><li>Các lô Mini-batch minh họa là <code>[0, 1]</code>, <code>[2, 0]</code>, <code>[1, 2]</code>. Đây là cách chọn lô phục vụ tính tay, không phải cách chia một epoch thông thường.</li></ul>
-</article>
-
-<article id="demo-step-4" class="demo-step">
-<div class="demo-step-heading"><span class="demo-time">1:50–2:15</span><h3>Bước 4. Đọc kết quả ví dụ nhỏ</h3></div>
-<p><strong>Thao tác:</strong> trở về cuối Terminal, chỉ vào kết quả:</p>
-<pre class="demo-output">Sau 3 lần cập nhật:
-GD = 0.7877 | SGD = 0.6660 | Mini-batch = 0.7837 | w* = 0.9286
-
-Số lần tính gradient thành phần:
-GD = 9, SGD = 3, Mini-batch = 6</pre>
-<p class="speech-label">Lời trình bày</p>
-<blockquote class="demo-speech"><p>“Sau ba lần cập nhật, mỗi phương pháp cho một giá trị w khác nhau. Nghiệm tối ưu của ví dụ là khoảng 0,9286. Tuy nhiên, chưa thể chỉ nhìn kết quả này để kết luận phương pháp nào tốt nhất: GD đã tính gradient trên tổng cộng chín lượt mẫu, SGD ba lượt và Mini-batch sáu lượt. Cùng số lần cập nhật chưa đồng nghĩa với cùng chi phí tính toán.”</p></blockquote>
-<h4>Nếu cần giải thích cách có nghiệm đối chiếu</h4>
-<pre class="demo-code" tabindex="0" aria-label="Tính nghiệm tối ưu của ví dụ một hệ số"><code>w_star = np.sum(X * Y) / np.sum(X * X)</code></pre>
-<p><code>w_star</code> là nghiệm tối ưu tính trực tiếp cho <strong>bài toán hồi quy một hệ số này</strong>, dùng để kiểm tra kết quả thuật toán. <code>np.sum</code> cộng các phần tử; tử số là Σxᵢyᵢ = 13, mẫu số là Σxᵢ² = 14.</p>
-<p class="caption">Mini-batch có giá trị toán học 0.78375; code dùng số thực dấu phẩy động và định dạng 4 chữ số nên lần chạy đối chiếu in 0.7837. Đừng nhầm khác biệt làm tròn với khác thuật toán.</p>
-</article>
-
-<article id="demo-step-5" class="demo-step">
-<div class="demo-step-heading"><span class="demo-time">2:15–2:50</span><h3>Bước 5. Chạy thí nghiệm lớn hơn, giải thích input/output</h3></div>
-<p><strong>Thao tác:</strong> chạy file 03, rồi chuyển sang code trong lúc chương trình thực thi.</p>
-<pre class="command"><code>python 03_so_sanh_gd_sgd_minibatch.py</code></pre>
-<p>Chỉ vào đoạn tạo dữ liệu của <strong>THÍ NGHIỆM A</strong>:</p>
-<pre class="demo-code" tabindex="0" aria-label="Tạo dữ liệu thí nghiệm A trong file 03"><code>rng = np.random.default_rng(42)
-N = 1000
+<div class="demo-step-heading"><span class="demo-time">0:25–0:45</span><h3>Bước 2. Nêu input, output và hàm mất mát</h3></div>
+<p><strong>Thao tác:</strong> chỉ nhanh vào phần tạo dữ liệu A và hàm <code>mat_mat</code>.</p>
+<pre class="demo-code" tabindex="0" aria-label="Dữ liệu hồi quy của thí nghiệm A"><code>N = 1000
 x = rng.uniform(0, 2, N)
 y = 3 * x + 4 + rng.normal(0, 1.0, N)
 X = np.column_stack([np.ones(N), x])</code></pre>
+<pre class="demo-code" tabindex="0" aria-label="Hàm đánh giá mất mát"><code>def mat_mat(X, y, theta):
+    r = X @ theta - y
+    return 0.5 * np.mean(r * r)</code></pre>
 <p class="speech-label">Lời trình bày</p>
-<blockquote class="demo-speech"><p>“Tiếp theo, em chạy file 03 trên một nghìn mẫu được tạo theo quan hệ y bằng 3x cộng 4 và có thêm nhiễu. Mô hình lần này học hai tham số: hệ số chặn và hệ số góc. Đầu vào là ma trận X cùng giá trị đúng y. Đầu ra gồm tham số đã học, lịch sử mất mát, thời gian và quỹ đạo cập nhật. Seed được cố định để có thể tái lập thí nghiệm.”</p></blockquote>
-<div class="table-wrap"><table><caption>Input và tham số của mô hình hai hệ số</caption><thead><tr><th>Thành phần</th><th>Ý nghĩa</th></tr></thead><tbody>
-<tr><td><code>rng</code></td><td>Bộ sinh số ngẫu nhiên, tạo bởi <code>np.random.default_rng</code>.</td></tr>
-<tr><td><code>42</code></td><td>Seed cố định cho việc tạo dữ liệu.</td></tr>
-<tr><td><code>x</code></td><td>1.000 giá trị đầu vào được sinh đều trong khoảng từ 0 đến 2.</td></tr>
-<tr><td><code>rng.normal(...)</code></td><td>Tạo nhiễu theo phân phối chuẩn; ở đây trung bình 0, độ lệch chuẩn 1.</td></tr>
-<tr><td><code>np.ones(N)</code></td><td>Cột gồm toàn số 1, dùng cho hệ số chặn.</td></tr>
-<tr><td><code>np.column_stack(...)</code></td><td>Ghép các mảng thành các cột của ma trận.</td></tr>
-<tr><td><code>X</code></td><td>Ma trận 1.000 hàng, 2 cột; mỗi hàng là <code>[1, x_i]</code>.</td></tr>
-<tr><td><code>theta</code></td><td>Vector tham số theo thứ tự <code>[hệ số chặn, hệ số góc]</code>.</td></tr>
-</tbody></table></div>
-<p>Vì dữ liệu có nhiễu, nghiệm tốt nhất trên bộ dữ liệu sinh ra không nhất thiết đúng bằng <code>[4, 3]</code>. Seed giúp tái lập dữ liệu; thời gian chạy vẫn phụ thuộc máy và môi trường.</p>
+<blockquote class="demo-speech"><p>“Đầu vào là một nghìn mẫu X và đáp án y. Đầu ra chính là theta gồm hệ số chặn và hệ số góc. Hàm mat_mat tính một nửa sai số bình phương trung bình để đánh giá mô hình sau mỗi epoch.”</p></blockquote>
+<details><summary>Chuẩn bị: đọc các biến trong đoạn này</summary><dl class="explain"><dt>N, x, y</dt><dd>N là số mẫu; x là giá trị đầu vào một chiều; y là giá trị đúng có thêm nhiễu.</dd><dt>rng</dt><dd>Bộ sinh số ngẫu nhiên; code khởi tạo bằng seed 42 trước đoạn trích để tái lập dữ liệu.</dd><dt>X</dt><dd>Ma trận 1.000 × 2. Mỗi hàng là [1, xᵢ]; cột số 1 dùng cho hệ số chặn.</dd><dt>theta</dt><dd>Vector [hệ số chặn, hệ số góc]. X @ theta là dự đoán trên toàn tập.</dd><dt>r, np.mean</dt><dd>r là sai lệch dự đoán trừ đáp án; np.mean lấy trung bình. r * r bình phương từng phần tử.</dd></dl><p>Dữ liệu có nhiễu nên nghiệm tối ưu trên bộ dữ liệu này không bắt buộc đúng bằng [4, 3].</p></details>
+</article>
+
+<article id="demo-step-3" class="demo-step">
+<div class="demo-step-heading"><span class="demo-time">0:45–1:20</span><h3>Bước 3. Nối mã giả với ba cách chọn lô</h3></div>
+<p><strong>Thao tác:</strong> liên hệ vòng lặp với mã giả trên slide 16, rồi chỉ vào <code>batch_size</code> của ba cấu hình. Một lần chạy script sẽ chạy đủ ba phương pháp.</p>
+<pre class="pseudo">Khởi tạo tham số
+Lặp theo epoch:
+    Chọn lô B theo thuật toán: N / 1 / b mẫu
+    Tính gradient trung bình trên B tại cùng tham số
+    Cập nhật tham số một lần</pre>
+<p>Đoạn lấy lô trong <code>huan_luyen</code> hiện thực bước chọn B:</p>
+<pre class="demo-code" tabindex="0" aria-label="Xáo trộn và lấy lô"><code>chi_so = rng.permutation(N)
+for bat_dau in range(0, N, batch_size):
+    lo = chi_so[bat_dau:bat_dau + batch_size]
+    Xb, yb = X[lo], y[lo]</code></pre>
+<div class="table-wrap"><table><caption>Cấu hình có sẵn trong file 03, thí nghiệm A</caption><thead><tr><th>Phương pháp</th><th>batch_size</th><th>lr</th><th>epochs</th></tr></thead><tbody><tr><td>GD</td><td>N = 1000</td><td>0.1</td><td>30</td></tr><tr><td>SGD</td><td>1</td><td>0.01</td><td>30</td></tr><tr><td>Mini-batch</td><td>32</td><td>0.05</td><td>30</td></tr></tbody></table></div>
+<p class="speech-label">Lời trình bày</p>
+<blockquote class="demo-speech"><p>“Theo mã giả, mỗi lần lặp chọn lô, tính gradient rồi cập nhật. Code dùng chung hàm huan_luyen: batch_size bằng N chọn cả tập cho GD; bằng một là SGD; bằng 32 là Mini-batch. rng.permutation xáo trộn dữ liệu, còn lo chứa chỉ số của lô. Như vậy, ba thuật toán khác nhau ở bước chọn mẫu, còn phép cập nhật được dùng chung.”</p></blockquote>
+<details><summary>Chuẩn bị: phân biệt tên trên slide và tên trong file</summary><p>Slide 16 dùng tên rút gọn <code>ids</code>, <code>start</code>, <code>b</code>, <code>lr</code>. File thật dùng <code>chi_so</code>, <code>bat_dau</code>, <code>batch_size</code> và <code>eta</code> trong vòng lặp. Ý nghĩa tương ứng nhau; với decay=0, eta bằng lr.</p><p>Trong bảng Terminal, cột b cạnh w là <strong>hệ số chặn</strong>; b trong nhãn “b = 32” lại là <strong>kích thước lô</strong>. Khi nói hãy gọi đầy đủ tên.</p></details>
+</article>
+
+<article id="demo-step-4" class="demo-step">
+<div class="demo-step-heading"><span class="demo-time">1:20–1:55</span><h3>Bước 4. Giải thích hai dòng gradient và cập nhật</h3></div>
+<p><strong>Thao tác:</strong> đặt con trỏ vào hai dòng sau trong hàm <code>huan_luyen</code>.</p>
+<pre class="demo-code" tabindex="0" aria-label="Hai dòng tính gradient và cập nhật tham số"><code>g = Xb.T @ (Xb @ theta - yb) / len(lo)
+theta = theta - eta * g</code></pre>
+<p class="speech-label">Lời trình bày</p>
+<blockquote class="demo-speech"><p>“Xb và yb là dữ liệu của lô hiện tại. Xb nhân theta cho dự đoán; trừ yb cho sai lệch. Nhân với ma trận chuyển vị rồi chia số mẫu thực tế sẽ thu được gradient trung bình g. Dòng tiếp theo cập nhật theta bằng cách trừ eta nhân g. Eta là tốc độ học. Đây là phép cập nhật chung của cả ba phương pháp.”</p></blockquote>
+<details><summary>Chuẩn bị: ý nghĩa từng ký hiệu và vì sao chia len(lo)</summary><div class="table-wrap"><table><thead><tr><th>Ký hiệu</th><th>Ý nghĩa</th></tr></thead><tbody><tr><td><code>Xb</code>, <code>yb</code></td><td>Dữ liệu đầu vào và giá trị đúng của lô.</td></tr><tr><td><code>@</code>, <code>.T</code></td><td>Nhân ma trận/vector và chuyển vị ma trận.</td></tr><tr><td><code>lo</code></td><td>Danh sách chỉ số của những mẫu trong lô.</td></tr><tr><td><code>g</code></td><td>Vector gradient, một thành phần cho mỗi tham số.</td></tr><tr><td><code>eta</code></td><td>Tốc độ học ở epoch hiện tại: lr / (1 + decay × epoch). Trong ba cấu hình chính, decay mặc định bằng 0 nên eta = lr.</td></tr><tr><td><code>len(lo)</code></td><td>Số mẫu thực tế trong lô. Với N=1000, lô 32 thì lô cuối có 8 mẫu; phải chia cho 8.</td></tr></tbody></table></div></details>
+</article>
+
+<article id="demo-step-5" class="demo-step">
+<div class="demo-step-heading"><span class="demo-time">1:55–2:30</span><h3>Bước 5. Đọc bảng thí nghiệm A</h3></div>
+<p><strong>Thao tác:</strong> chuyển về Terminal, tìm dòng <strong>THÍ NGHIỆM A</strong>. Chỉ vào hai cột “số cập nhật” và “J − J*”.</p>
+<div class="table-wrap"><table><caption>Kết quả đối chiếu của cấu hình đang dùng</caption><thead><tr><th>Phương pháp</th><th>Cập nhật sau 30 epoch</th><th>J − J*</th></tr></thead><tbody><tr><td>GD</td><td>30</td><td>≈ 2.50 × 10⁻²</td></tr><tr><td>SGD</td><td>30.000</td><td>≈ 1.28 × 10⁻²</td></tr><tr><td>Mini-batch, lô 32</td><td>960</td><td>≈ 6.96 × 10⁻⁵</td></tr></tbody></table></div>
+<p class="speech-label">Lời trình bày</p>
+<blockquote class="demo-speech"><p>“Sau cùng 30 epoch, GD cập nhật 30 lần, SGD 30 nghìn lần, Mini-batch 960 lần. Cột J trừ J sao đo khoảng cách tới mất mát tối ưu, càng nhỏ càng tốt. Trong cấu hình này, Mini-batch có sai số cuối nhỏ nhất. Kết quả phụ thuộc cả kích thước lô và tốc độ học, nên chưa thể kết luận phương pháp nào luôn tốt nhất.”</p></blockquote>
+<details><summary>Chuẩn bị: giải thích 960 và J*</summary><p>⌈1000/32⌉ = 32 cập nhật/epoch; 32 × 30 = <strong>960</strong>. J* là loss tại nghiệm bình phương tối thiểu được tính bằng <code>np.linalg.solve(X.T @ X, X.T @ y)</code>; đây là mốc đối chiếu cho bài toán này. J−J* không phải accuracy và cũng không phải khoảng cách giữa hai vector tham số.</p><p>Thời gian in trong Terminal thay đổi theo máy. Hàm huan_luyen đo thời gian vòng huấn luyện; phần tính loss toàn tập sau mỗi epoch và vẽ hình nằm ngoài bộ đếm này.</p></details>
 </article>
 
 <article id="demo-step-6" class="demo-step">
-<div class="demo-step-heading"><span class="demo-time">2:50–3:50</span><h3>Bước 6. Giải thích trọng tâm hàm huấn luyện</h3></div>
-<p><strong>Thao tác:</strong> chỉ vào hàm <code>huan_luyen</code> trong file 03, tập trung vào đoạn sau. Đoạn trích bỏ thụt lề ngoài để dễ đọc; khi chạy hãy dùng file Python đầy đủ.</p>
-<pre class="demo-code" tabindex="0" aria-label="Trọng tâm hàm huan_luyen"><code>chi_so = rng.permutation(N)
-
-for bat_dau in range(0, N, batch_size):
-    lo = chi_so[bat_dau:bat_dau + batch_size]
-    Xb, yb = X[lo], y[lo]
-
-    g = Xb.T @ (Xb @ theta - yb) / len(lo)
-    theta = theta - eta * g</code></pre>
-<p class="speech-label">Lời trình bày</p>
-<blockquote class="demo-speech"><p>“Hàm huan_luyen dùng chung cho cả ba phương pháp. Mỗi epoch là một lượt đi qua toàn bộ dữ liệu. Trước mỗi epoch, chương trình xáo trộn chỉ số rồi chia thành các lô. Xb và yb là dữ liệu của lô hiện tại. Hai dòng quan trọng nhất là tính gradient và cập nhật theta. Dấu a còng biểu diễn phép nhân ma trận; chấm T là chuyển vị. Chương trình lấy dự đoán trừ giá trị đúng, tính gradient trung bình của lô, rồi cập nhật tham số. Đặt batch_size bằng toàn bộ dữ liệu là GD, bằng một là SGD, còn bằng 32 là Mini-batch.”</p></blockquote>
-<div class="table-wrap"><table><caption>Biến và hàm trong vòng huấn luyện</caption><thead><tr><th>Biến / hàm</th><th>Ý nghĩa</th></tr></thead><tbody>
-<tr><td><code>huan_luyen(...)</code></td><td>Hàm tự viết để thực hiện quá trình tối ưu.</td></tr>
-<tr><td><code>batch_size</code></td><td>Số mẫu tối đa trong một lô.</td></tr>
-<tr><td><code>epochs</code></td><td>Số lượt đi qua toàn bộ dữ liệu.</td></tr>
-<tr><td><code>lr</code></td><td>Tốc độ học ban đầu.</td></tr>
-<tr><td><code>eta</code></td><td>Tốc độ học tại epoch hiện tại: <code>lr / (1.0 + decay * epoch)</code>. Khi <code>decay = 0</code>, tốc độ học giữ nguyên.</td></tr>
-<tr><td><code>rng.permutation(N)</code></td><td>Tạo thứ tự ngẫu nhiên của các chỉ số mẫu.</td></tr>
-<tr><td><code>bat_dau</code></td><td>Vị trí bắt đầu của lô trong danh sách đã xáo trộn.</td></tr>
-<tr><td><code>lo</code></td><td>Các chỉ số thuộc lô hiện tại.</td></tr>
-<tr><td><code>Xb</code>, <code>yb</code></td><td>Ma trận đầu vào và giá trị đúng của lô.</td></tr>
-<tr><td><code>Xb @ theta</code></td><td>Vector dự đoán của lô; <code>@</code> là phép nhân ma trận/vector.</td></tr>
-<tr><td><code>Xb.T</code></td><td>Ma trận chuyển vị của <code>Xb</code>, đổi hàng thành cột.</td></tr>
-<tr><td><code>len(lo)</code></td><td>Số mẫu thực tế trong lô, vì lô cuối có thể ít hơn <code>batch_size</code>.</td></tr>
-<tr><td><code>g</code></td><td>Vector gradient, có một thành phần cho mỗi tham số.</td></tr>
-</tbody></table></div>
-<h4>Hàm đánh giá mất mát nằm ngay phía trên</h4>
-<pre class="demo-code" tabindex="0" aria-label="Hàm mat_mat trong file 03"><code>def mat_mat(X, y, theta):
-    r = X @ theta - y
-    return 0.5 * np.mean(r * r)</code></pre>
-<ul><li><code>r</code>: vector sai lệch dự đoán.</li><li><code>r * r</code>: bình phương từng sai lệch.</li><li>Giá trị trả về là <strong>một nửa sai số bình phương trung bình</strong>.</li><li>Giá trị này được tính trên toàn bộ dữ liệu sau mỗi epoch để theo dõi quá trình học.</li></ul>
-<p class="speech-label">Câu nói bổ sung trong bước này</p>
-<blockquote class="demo-speech demo-aside"><p>“Hàm mat_mat đo mức sai lệch của mô hình sau mỗi epoch.”</p></blockquote>
-<p>Trong lượt demo 5 phút, chỉ cần chỉ nhanh vào hàm và nói câu trên. Để đọc toàn bộ hàm, đầu ra và số dòng gốc, xem <a href="#numpy">mục 6 · NumPy và vòng huấn luyện</a>.</p>
-</article>
-
-<article id="demo-step-7" class="demo-step">
-<div class="demo-step-heading"><span class="demo-time">3:50–4:30</span><h3>Bước 7. Đọc bảng kết quả, giải thích số lần cập nhật</h3></div>
-<p><strong>Thao tác:</strong> về Terminal, chỉ vào bảng <strong>THÍ NGHIỆM A</strong>. Các giá trị đối chiếu từ phần tính toán của code:</p>
-<div class="table-wrap"><table><caption>Kết quả thí nghiệm A sau 30 epoch</caption><thead><tr><th>Phương pháp</th><th>Số cập nhật</th><th>Hệ số chặn</th><th>Hệ số góc</th><th>J − J*</th></tr></thead><tbody>
-<tr><td>GD</td><td>30</td><td>3,3881</td><td>3,4648</td><td>≈ 0,0250</td></tr>
-<tr><td>SGD</td><td>30.000</td><td>3,7362</td><td>3,0313</td><td>≈ 0,0128</td></tr>
-<tr><td>Mini-batch, lô 32</td><td>960</td><td>3,8253</td><td>3,0883</td><td>≈ 0,0000696</td></tr>
-</tbody></table></div>
-<p>Nghiệm đối chiếu: hệ số chặn ≈ <strong>3,8214</strong>, hệ số góc ≈ <strong>3,1012</strong>. Cột thời gian trong Terminal thay đổi theo máy; không cần đọc số mili giây cố định trong kịch bản.</p>
-<p class="speech-label">Lời trình bày</p>
-<blockquote class="demo-speech"><p>“Cả ba phương pháp cùng chạy 30 epoch, nhưng số lần cập nhật khác nhau. GD cập nhật 30 lần; SGD 30 nghìn lần; Mini-batch 960 lần. Cột J trừ J sao là khoảng cách giữa mất mát hiện tại và mất mát tối ưu, càng nhỏ càng tốt. Trong cấu hình này, Mini-batch có sai số cuối thấp nhất. Đây là kết quả của bộ dữ liệu và tốc độ học đang chọn, chưa phải kết luận cho mọi bài toán.”</p></blockquote>
-<h4>Cách giải thích 960 lần cập nhật</h4>
-<pre class="demo-output">Mỗi epoch: ceil(1000 / 32) = 32 lần cập nhật
-30 epoch:  32 × 30 = 960 lần cập nhật</pre>
-<p><code>ceil</code> nghĩa là làm tròn lên. Một epoch có 31 lô đủ 32 mẫu và một lô cuối gồm 8 mẫu.</p>
-<div class="note"><strong>Điểm dễ nhầm:</strong> trong nhãn <code>Mini-batch GD (b = 32)</code>, b là kích thước lô. Nhưng cột b cạnh cột w trong bảng kết quả lại là <strong>hệ số chặn</strong>. Khi nói, hãy gọi đầy đủ hai khái niệm này.</div>
-<p>Tốc độ học trong cấu hình A: GD = 0.1, SGD = 0.01, Mini-batch = 0.05. Đây không phải thí nghiệm chỉ thay đổi duy nhất kích thước lô.</p>
-</article>
-
-<article id="demo-step-8" class="demo-step">
-<div class="demo-step-heading"><span class="demo-time">4:30–5:00</span><h3>Bước 8. Mở đồ thị và kết luận</h3></div>
-<p><strong>Thao tác:</strong> khi chương trình chạy xong, mở ảnh từ Terminal đang ở thư mục <code>code</code>:</p>
+<div class="demo-step-heading"><span class="demo-time">2:30–3:00</span><h3>Bước 6. Mở đồ thị và kết thúc demo</h3></div>
+<p><strong>Thao tác:</strong> khi script chạy xong, mở ảnh; nếu đã mở ảnh từ trước thì chỉ chuyển cửa sổ.</p>
 <pre class="command"><code>Invoke-Item "..\hinh\hinh4_mat_mat.png"</code></pre>
-<p>Ảnh được lưu ra file; chương trình không tự bật cửa sổ đồ thị vì sử dụng chế độ <code>Agg</code>.</p>
 <p class="speech-label">Lời trình bày</p>
-<blockquote class="demo-speech"><p>“Trục ngang là epoch, trục dọc là khoảng cách tới mất mát tối ưu trên thang log. GD giảm khá đều; SGD dao động rõ hơn; Mini-batch cũng dao động nhưng đạt sai số cuối nhỏ trong thí nghiệm này. Đường cam minh họa SGD khi giảm dần tốc độ học. Qua demo, ba phương pháp có chung phép cập nhật theo gradient; điểm khác biệt chính là số mẫu dùng trong mỗi bước, từ đó ảnh hưởng đến độ dao động và chi phí tính toán.”</p></blockquote>
-<figure id="demo-figure"><img src="assets/hinh4_mat_mat.png" loading="lazy" width="1200" height="736" alt="Đồ thị sai số hàm mất mát theo epoch: GD xanh dương giảm đều, SGD đỏ dao động, Mini-batch xanh lá có sai số cuối nhỏ và SGD giảm tốc độ học màu cam."><figcaption>Bản ảnh đã lưu trong guide để luyện ngoại tuyến. Khi chạy Python, ảnh mới nằm trong thư mục hinh của bài làm; ảnh nhúng này không tự cập nhật.</figcaption></figure>
-<p><strong>Kết thúc tại đây để giữ khoảng 5 phút.</strong> File 03 còn có thí nghiệm B và hai ảnh khác; có thể mở khi giảng viên hỏi thêm về thời gian chạy hoặc ảnh hưởng của kích thước lô.</p>
+<blockquote class="demo-speech"><p>“Đồ thị cho thấy GD giảm khá đều, SGD dao động rõ hơn, còn Mini-batch đạt sai số cuối nhỏ trong cấu hình này. Qua code, ba thuật toán cùng phép cập nhật, khác chủ yếu ở lô dùng tính gradient. Phần demo của nhóm em đến đây kết thúc. Em xin cảm ơn cô và các bạn, và sẵn sàng trao đổi các câu hỏi.”</p></blockquote>
+<figure id="demo-figure"><img src="assets/hinh4_mat_mat.png" loading="lazy" width="1200" height="736" alt="Sai số mất mát theo epoch của GD, SGD, Mini-batch và SGD giảm dần tốc độ học."><figcaption>Ảnh đã lưu để luyện ngoại tuyến. Ảnh mới từ Python nằm trong thư mục hinh; ảnh nhúng trong guide không tự cập nhật.</figcaption></figure>
+<p class="caption">Trục ngang: epoch; trục dọc: J−J* trên thang log, càng nhỏ càng tốt. Code dùng Agg nên chỉ lưu ảnh, không tự mở cửa sổ. Đường cam là SGD giảm dần tốc độ học, đã được giới thiệu ở slide 17.</p>
+<p><strong>Sau demo:</strong> giữ màn hình kết quả để nhận câu hỏi; có thể mở lại slide 20 làm màn hình kết thúc.</p>
+</article>
+<div class="demo-cue"><h3>Thẻ nhắc 3 phút</h3><p>Cấu trúc file → chạy 03 → input/output → mã giả và batch_size N / 1 / 32 → gradient/cập nhật → kết quả → đồ thị → cảm ơn, hỏi đáp.</p><p>Phần giải thích chi tiết vẫn có tại <a href="#numpy">mục 6</a>; <a href="#slide-script">mục 14</a> chứa lời thuyết trình cho slide 16–20, nói trước phần demo này.</p></div>
+<button class="mark-read" data-mark="13" data-read-label="Đánh dấu đã luyện demo 3 phút">Đánh dấu đã luyện demo 3 phút</button>
+</section>
+
+<section id="slide-script" data-chapter="14">
+<div class="chapter-heading"><span>14</span><h2>Lời thuyết trình slide 16–20</h2></div>
+<p class="lead">Phần của bạn gồm đúng 5 slide: 16 → 17 → 18 → 19 → 20. Trình bày hết phần slide rồi mới chuyển sang demo code khoảng 3 phút.</p>
+<p>Đối chiếu với <code>Slide_PhuongPhapToiUuBacMot.pptx</code> hiện có <strong>20 slide</strong>. Đọc khối “Lời trình bày” và câu chuyển ý; các ghi chú còn lại dùng để chuẩn bị và trả lời câu hỏi.</p>
+<div class="note"><strong>Dùng số thứ tự ở khung slide bên trái PowerPoint.</strong> Slide thứ 16 đang in số 15 ở chân trang, …, slide thứ 20 in 19. Guide dùng <strong>thứ tự thực 16–20</strong>, khớp phần bạn được phân công.</div>
+<div class="presentation-route"><h3>Nhịp trình bày gợi ý</h3><p><strong>16</strong> vòng huấn luyện → <strong>17</strong> hồi quy tuyến tính → <strong>18</strong> kích thước lô → <strong>19</strong> PyTorch → <strong>20</strong> kết luận nội dung → <a href="#demo-script"><strong>demo code 3 phút</strong></a> → cảm ơn và hỏi đáp.</p><p>Các mốc dưới đây cộng khoảng <strong>3 phút 10 giây nói theo slide + 3 phút demo = 6 phút 10 giây</strong>, chưa tính hỏi đáp. Đây là lịch luyện gợi ý; không chuyển sang chạy code giữa các slide.</p></div>
+<ol class="slide-index" start="16" aria-label="Lời thuyết trình từng slide">
+<li><a href="#slide-16">Demo: một hàm, ba kích thước lô</a><span>35 giây</span></li>
+<li><a href="#slide-17">Kết quả hồi quy tuyến tính</a><span>45 giây</span></li>
+<li><a href="#slide-18">Ảnh hưởng của kích thước lô</a><span>40 giây</span></li>
+<li><a href="#slide-19">Demo PyTorch: huấn luyện mạng MLP</a><span>45 giây</span></li>
+<li><a href="#slide-20">Kết luận và chuyển sang demo</a><span>25 giây</span></li>
+</ol>
+
+<article id="slide-16" class="demo-step slide-talk" data-slide="16" data-seconds="35">
+<div class="demo-step-heading"><span class="demo-time">Slide 16 · 35 giây</span><h3>Demo: một hàm, ba kích thước lô</h3></div>
+<p><strong>Chỉ vào:</strong> vòng lấy lô, hai dòng tính gradient/cập nhật và ba nhãn b = N, b = 1, b = 32. Giải thích ngay trên slide; giữ PowerPoint để sang trang tiếp.</p>
+<p class="speech-label">Lời trình bày</p>
+<blockquote class="demo-speech"><p>“Tiếp theo, em trình bày phần cài đặt và thực nghiệm. Từ mã giả, nhóm xây dựng một vòng huấn luyện chung: khởi tạo tham số, xáo trộn dữ liệu, lấy lô, tính gradient rồi cập nhật. Khi b bằng N, một lô là toàn tập nên ta có GD; b bằng một là SGD; b bằng 32 là Mini-batch. Gradient được chia cho len(lo), tức số mẫu thực tế của lô. Nhóm sẽ chạy trực tiếp đoạn code này sau phần slide; trước hết em trình bày các kết quả đã thu được.”</p></blockquote>
+<p class="slide-transition"><strong>Chuyển ý:</strong> “Đầu tiên là kết quả trên bài toán hồi quy tuyến tính.”</p>
+<details><summary>Chuẩn bị giải thích đoạn code trên slide</summary><p>Đoạn trên slide là bản rút gọn, dùng ids/start/b/lr; file thật dùng chi_so/bat_dau/batch_size/eta. Bản rút gọn bỏ đo thời gian và lưu lịch sử. Với decay=0, eta trong file bằng lr.</p><p><code>theta</code> là vector tham số; <code>Xb, yb</code> là dữ liệu lô; <code>g</code> là gradient trung bình; <code>lr</code> là tốc độ học. Lô cuối có thể nhỏ hơn b nên dùng len(lo). Chỉ giải thích luồng chính ở đây, dành thao tác chạy cho sau slide 20.</p></details>
 </article>
 
-<div class="demo-cue"><h3>Thẻ nhắc thứ tự thao tác</h3><p>Chạy 01 → Phần B → grad_batch → ba cách chọn mẫu → kết quả nhỏ → chạy 03 → tạo dữ liệu → huan_luyen → bảng kết quả A → đồ thị mất mát.</p><p>Khi luyện lại, bắt đầu từ <a href="#demo-step-1">bước 1</a>. Khi cần tra chi tiết, xem <a href="#python">code 01 ở mục 4</a>, <a href="#numpy">code 03 ở mục 6</a> hoặc <a href="#run">hướng dẫn chạy ở mục 10</a>.</p></div>
-<button class="mark-read" data-mark="13" data-read-label="Đánh dấu đã luyện kịch bản demo">Đánh dấu đã luyện kịch bản demo</button>
+<article id="slide-17" class="demo-step slide-talk" data-slide="17" data-seconds="45">
+<div class="demo-step-heading"><span class="demo-time">Slide 17 · 45 giây</span><h3>Kết quả hồi quy tuyến tính</h3></div>
+<p><strong>Chỉ vào:</strong> N=1000 và 30 epoch, cột số cập nhật, cột J−J*, rồi các đường trên đồ thị. Đây là kết quả đã lưu trong bộ bài làm.</p>
+<p class="speech-label">Lời trình bày</p>
+<blockquote class="demo-speech"><p>“Thí nghiệm dùng một nghìn mẫu sinh theo quan hệ y bằng 3x cộng 4 có nhiễu và chạy 30 epoch. Cột J trừ J sao đo chênh lệch so với mất mát tối ưu, càng nhỏ càng tốt. Mini-batch đạt khoảng 6,96 nhân 10 mũ âm năm, nhỏ nhất trong ba cấu hình chính. Tuy nhiên, GD chỉ cập nhật 30 lần, SGD 30 nghìn lần, Mini-batch 960 lần; tốc độ học cũng khác nhau. Do đó, kết quả không chứng minh Mini-batch luôn tốt nhất. Đường cam còn minh họa SGD khi giảm dần tốc độ học.”</p></blockquote>
+<p class="slide-transition"><strong>Chuyển ý:</strong> “Ngoài sai số theo epoch, nhóm còn khảo sát thời gian khi thay đổi kích thước lô.”</p>
+<details><summary>Số liệu và cách đọc đồ thị</summary><p>N=1000; y=3x+4+nhiễu; theta ban đầu bằng 0; 30 epoch. GD: 30 cập nhật, J−J* ≈ 2.50×10⁻². SGD: 30.000 cập nhật, ≈ 1.28×10⁻². Mini-batch: 960 cập nhật, ≈ 6.96×10⁻⁵.</p><p>Trục dọc là J−J* trên thang log, không phải accuracy. J* là loss tại nghiệm bình phương tối thiểu. Đường cam dùng ηₜ = η₀/(1+0.3t), trong đó t là epoch; nó vẫn có thể dao động và không bắt buộc thấp hơn ở mọi epoch.</p></details>
+</article>
+
+<article id="slide-18" class="demo-step slide-talk" data-slide="18" data-seconds="40">
+<div class="demo-step-heading"><span class="demo-time">Slide 18 · 40 giây</span><h3>Ảnh hưởng của kích thước lô</h3></div>
+<p><strong>Chỉ vào:</strong> biểu đồ thời gian/epoch bên trái trước, rồi đồ thị sai số theo thời gian bên phải. Chốt bằng dòng ghi b và η tương ứng.</p>
+<p class="speech-label">Lời trình bày</p>
+<blockquote class="demo-speech"><p>“Thí nghiệm tiếp theo dùng 50 nghìn mẫu, 20 đặc trưng và năm epoch. Biểu đồ bên trái cho thấy lô một mẫu tốn nhiều thời gian do phải thực hiện nhiều vòng cập nhật; gom lô giúp giảm chi phí vòng lặp và tận dụng phép toán ma trận. Nhưng chạy nhanh một epoch chưa đủ: lô toàn bộ chỉ có năm cập nhật sau năm epoch. Vì vậy, đồ thị bên phải xét thêm sai số theo thời gian. Kết quả phụ thuộc cả kích thước lô, tốc độ học và phần cứng; không có một kích thước tối ưu chung cho mọi bài toán.”</p></blockquote>
+<p class="slide-transition"><strong>Chuyển ý:</strong> “Nhóm tiếp tục minh họa cách chọn lô này khi huấn luyện mạng nơ-ron bằng PyTorch.”</p>
+<details><summary>Chuẩn bị đọc hai trục và cấu hình</summary><p>Bên trái: trục ngang là kích thước lô, trục dọc là mili giây mỗi epoch trên thang log. Bên phải: trục ngang là thời gian tích lũy, trục dọc là J−J*, đều dùng thang log. Cần nhìn cả hai trục để đánh giá tốc độ đạt một mức sai số.</p><p>Các lô 1 / 8 / 32 / 128 / 1024 / N ghép với η = 0.005 / 0.02 / 0.05 / 0.1 / 0.3 / 0.5. Do η cũng thay đổi, không quy toàn bộ chênh lệch kết quả cho riêng kích thước lô. Hình là kết quả đã lưu, thời gian có thể khác khi chạy trên máy khác.</p></details>
+</article>
+
+<article id="slide-19" class="demo-step slide-talk" data-slide="19" data-seconds="45">
+<div class="demo-step-heading"><span class="demo-time">Slide 19 · 45 giây</span><h3>Demo PyTorch: huấn luyện mạng MLP</h3></div>
+<p><strong>Chỉ vào:</strong> kiến trúc 64–64–10, cột accuracy và cột thời gian của SGD/Mini-batch. Trình bày kết quả đã lưu; không chạy thêm file 05 trong demo 3 phút.</p>
+<p class="speech-label">Lời trình bày</p>
+<blockquote class="demo-speech"><p>“Ở bài toán nhận dạng chữ số, nhóm dùng ảnh 8 nhân 8, tương ứng 64 đầu vào, một lớp ẩn 64 nút và 10 đầu ra. Cả ba cấu hình dùng chung torch.optim.SGD; cách chia lô do DataLoader quyết định. Sau 30 epoch, SGD đạt accuracy khoảng 97,78 phần trăm, Mini-batch 97,50 phần trăm. Trong lần chạy đã lưu, thời gian tương ứng là 27,08 và 1,44 giây. Ví dụ này cho thấy Mini-batch đạt độ chính xác gần SGD với thời gian thấp hơn trong cấu hình đang xét; con số thời gian phụ thuộc máy và tốc độ học.”</p></blockquote>
+<p class="slide-transition"><strong>Chuyển ý:</strong> “Từ các ví dụ tính tay và thực nghiệm, em xin chốt lại ba điểm chính.”</p>
+<details><summary>Chuẩn bị về PyTorch và bảng kết quả</summary><p>Tập digits có 1.437 mẫu train và 360 mẫu test trong lần chia này. Loss là cross-entropy. Cấu hình GD dùng batch=1437, lr=0.1, accuracy 82.50%, thời gian 0.67 s; SGD dùng batch=1, lr=0.01; Mini-batch dùng batch=32, lr=0.1.</p><p><code>optimizer.zero_grad()</code> xóa gradient cũ; <code>loss.backward()</code> tính gradient; <code>optimizer.step()</code> cập nhật tham số. Cùng tên optimizer SGD không có nghĩa cả ba cấu hình đều cập nhật từng mẫu: số mẫu của mỗi lần cập nhật phụ thuộc DataLoader.</p><p>Đây là kết quả minh họa của một lần chia dữ liệu và những cấu hình cụ thể; không đọc các số đã lưu như số vừa chạy trực tiếp. Muốn giải thích code chi tiết, xem <a href="#torch">mục 8</a>.</p></details>
+</article>
+
+<article id="slide-20" class="demo-step slide-talk" data-slide="20" data-seconds="25">
+<div class="demo-step-heading"><span class="demo-time">Slide 20 · 25 giây</span><h3>Kết luận</h3></div>
+<p><strong>Chỉ vào:</strong> công thức cập nhật chung và ba ô GD/SGD/Mini-batch. Chốt nội dung slide, sau đó chuyển sang VS Code để demo.</p>
+<p class="speech-label">Lời trình bày</p>
+<blockquote class="demo-speech"><p>“Tóm lại, ba phương pháp cùng công thức cập nhật, khác nhau ở số mẫu dùng để tính gradient. Cần chọn tốc độ học và kích thước lô cùng nhau, đánh giá cả mất mát lẫn chi phí tính toán. Phần nội dung trên slide đến đây hoàn tất. Sau đây, em xin giới thiệu cấu trúc file và chạy demo khoảng ba phút để đối chiếu mã giả với chương trình.”</p></blockquote>
+<div class="next-actions"><a class="primary link-button" href="#demo-script">Sau slide 20: bắt đầu demo 3 phút</a></div>
+<p class="slide-transition"><strong>Thao tác chuyển:</strong> mở VS Code ở thư mục code, bắt đầu bước 1 của demo. Cảm ơn và mời hỏi đáp sau khi demo hoàn tất.</p>
+</article>
+
+<div class="demo-cue"><h3>Thẻ nhắc phần của bạn</h3><p>16 vòng huấn luyện → 17 hồi quy → 18 kích thước lô → 19 MLP → 20 kết luận → <a href="#demo-script">cấu trúc file và demo 3 phút</a> → cảm ơn, hỏi đáp.</p><p>Khi luyện, mở PowerPoint ở slide thứ 16 và guide cạnh nhau. Chỉ đọc lời trình bày và câu chuyển ý; dùng các phần thu gọn để chuẩn bị trước hoặc tra khi được hỏi.</p></div>
+<button class="mark-read" data-mark="14" data-read-label="Đánh dấu đã luyện slide 16–20">Đánh dấu đã luyện slide 16–20</button>
 </section>
+
 <footer><p>Bạn đã đi từ một công thức đến vòng huấn luyện thực tế.</p><a href="#start">Về đầu sổ tay</a></footer></main>
 <noscript><div class="noscript">Bật JavaScript để xem code trích, mô phỏng và bài kiểm tra. Văn bản giải thích vẫn đọc được.</div></noscript>
 </body></html>

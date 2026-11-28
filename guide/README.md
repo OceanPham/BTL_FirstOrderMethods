@@ -20,7 +20,8 @@ Mở **index.html** bằng Edge, Chrome hoặc Firefox. Không cần server, Int
 10. Hướng dẫn chạy code từng bước: cài môi trường, sao chép lệnh, đối chiếu kết quả, mở thư mục ảnh và xử lý lỗi.
 11. Tám câu tự kiểm tra có giải thích.
 12. Toàn bộ code gốc và nguồn tham khảo.
-13. Kịch bản demo code 5 phút: 8 bước có mốc thời gian, đầy đủ lời thoại, lệnh chạy, code, giải thích hàm/biến và kết quả đối chiếu.
+13. Kịch bản demo code 3 phút: giới thiệu cấu trúc 5 file, chạy file 03, nối mã giả với ba cách chọn lô, giải thích gradient/cập nhật và đối chiếu kết quả.
+14. Lời thuyết trình đúng 5 slide 16–20: lời thoại từng trang, vị trí cần chỉ vào, câu chuyển ý và ghi chú chuẩn bị; trình bày hết slide 20 rồi mới demo.
 
 Bấm “Đánh dấu đã hiểu” để lưu tiến độ riêng trong trình duyệt; không gửi dữ liệu đi.
 Tìm mục học chỉ lọc mục lục. Có thể dùng Ctrl+F để tìm trong nội dung.
@@ -29,10 +30,13 @@ Các mô phỏng tính trực tiếp bằng JavaScript; không phải kết qu�
 
 ## Luyện thuyết trình demo
 
-Mở mục **13. Kịch bản demo 5 phút** trong mục lục hoặc nút **Luyện demo 5 phút** ở đầu guide.
-Chuẩn bị môi trường và chạy thử trước buổi trình bày; khi bấm giờ, đọc các khối **Lời trình bày** và thực hiện thao tác tương ứng. Các bảng giải thích dùng để chuẩn bị, không cần đọc toàn bộ trong 5 phút.
-Có liên kết nhảy đến từng bước, nút sao chép lệnh PowerShell và ảnh đồ thị đã lưu để luyện ngoại tuyến. Lệnh Python cần chạy trong Terminal; guide không thực thi Python.
-Tiến độ có 14 mục (0–13), giữ các đánh dấu đã lưu trước đó. Nút **In / lưu PDF** cũng bao gồm kịch bản mới.
+Mở mục **14. Lời thuyết trình slide 16–20** để luyện phần được phân công. Guide dùng thứ tự slide trong khung bên trái PowerPoint: slide thứ 16 in số 15 ở chân trang, đến slide thứ 20 in số 19. Nội dung được đối chiếu với bộ PowerPoint 20 trang hiện có.
+
+Trình bày liên tục **16 → 17 → 18 → 19 → 20**, sau đó chuyển sang **13. Kịch bản demo 3 phút** hoặc nút **Luyện demo 3 phút** ở đầu guide. Giới thiệu nhanh cấu trúc 5 file, rồi chỉ chạy `03_so_sanh_gd_sgd_minibatch.py` và giải thích phần cốt lõi của ba thuật toán dựa trên mã giả. Kết thúc demo mới cảm ơn và hỏi đáp. Các kết quả trên slide, bao gồm PyTorch ở slide 19, là kết quả đã lưu.
+
+Chuẩn bị môi trường và chạy thử trước buổi trình bày; khi bấm giờ, đọc các khối **Lời trình bày** và thực hiện thao tác tương ứng. Phần giải thích biến/hàm thu gọn dùng để chuẩn bị, không cần đọc toàn bộ. Thời lượng gợi ý cho 5 slide là 3 phút 10 giây, cộng demo 3 phút thành khoảng 6 phút 10 giây, chưa tính hỏi đáp.
+
+Có liên kết nhảy đến từng slide/bước, nút sao chép lệnh PowerShell và ảnh đồ thị đã lưu để luyện ngoại tuyến. Lệnh Python cần chạy trong Terminal; guide không thực thi Python. Tiến độ có 15 mục (0–14), giữ các đánh dấu đã lưu trước đó. Nút **In / lưu PDF** mở các phần giải thích và bao gồm cả lời slide, demo.
 
 ## Cấu trúc
 
